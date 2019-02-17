@@ -1,4 +1,8 @@
 const commando = require('discord.js-commando')
+const bot = new commando.Client({
+    owner: '452666956353503252',
+    commandPrefix: '-'
+});
 
 class KickMemberCommand extends commando.Command
 {
@@ -19,11 +23,11 @@ constructor(client)
         }
         else
         {
-            if(args = message.mentions.users.first())
+            if(args = message.mentions.members.first())
             {
-                 const name = message.mentions.users.first()
-                let member = message.member.guild.members.find('username', 'bll_ue Alt')
-                member.kick('Member kicked by ' + message.author)
+                const member = message.mentions.members.first();
+                member.kick('Member kicked by ' + message.member.displayName);
+                reply('Successfully kicked ' + message.mentions.members.first())
             }
             else
             {
