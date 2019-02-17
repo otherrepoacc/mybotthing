@@ -22,7 +22,7 @@ constructor(client)
             if(args = message.mentions.users.first())
             {
                  let name = message.mentions.users.first()
-                let member = message.member.guild.members.find(name)
+                let member = message.member.guild.members.find('username', name)
                 member.kick('Member kicked by ' + message.author)
             }
             else
