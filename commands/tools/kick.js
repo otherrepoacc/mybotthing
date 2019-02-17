@@ -21,8 +21,8 @@ constructor(client)
         {
             if(args = message.mentions.users.first())
             {
-                 let name = message.mentions.users.first()
-                let member = message.member.guild.members.find('username', name)
+                 const name = message.mentions.users.first()
+                let member = message.member.guild.members.find('username', 'bll_ue Alt')
                 member.kick('Member kicked by ' + message.author)
             }
             else
