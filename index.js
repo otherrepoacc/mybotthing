@@ -26,6 +26,19 @@ if(message.content == 'hi')
 
 bot.on('ready', function(){
     console.log('Bot is ready.');
+
+bot.on('guildMemberAdd', function(member){
+    if(!member.guild.channels.find('name', 'welcome'))
+    {
+        member.guild.createChannel('welcome', 'text')
+        .then(function()
+        {
+            let channel = member.guild.channels.find('name', 'welcome')
+            channel.send(member.displayName + ' has joined the server!')
+        })
+    }
+})
+
 });
 bot.on('guildMemberAdd', function(member){
     if(!member.guild.roles.find("name", 'Member'))
@@ -56,6 +69,7 @@ bot.on('guildDelete', function(){
 bot.on('ready', function(){
     bot.user.setActivity('' + bot.guilds.size + ' servers | @bll_ue Bot help', {type: 'LISTENING'})
 })
+
 
 
 
