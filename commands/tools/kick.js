@@ -21,7 +21,9 @@ constructor(client)
         {
             if(args = message.mentions.users.first())
             {
-                message.mentions.users.member.kick('Member kicked by ' + message.member.displayName + '.')
+                 let name = message.mentions.users.first()
+                let member = message.member.guild.members.find("name", name)
+                member.kick('Member kicked by ' + message.author)
             }
             else
             {
