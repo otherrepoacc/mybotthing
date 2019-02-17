@@ -53,6 +53,9 @@ bot.on('guildCreate', function(){   /* this code changes the bot activity to "Li
 bot.on('guildDelete', function(){
     bot.user.setActivity('' + bot.guilds.size + ' servers | @bll_ue Bot help', {type: 'LISTENING'})
 })
+bot.on('ready', function(){
+    bot.user.setActivity('' + bot.guilds.size + ' servers | @bll_ue Bot help', {type: 'LISTENING'})
+})
 
 
 
