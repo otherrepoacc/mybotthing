@@ -15,11 +15,11 @@ constructor(client)
     {
         if(args == '')
         {
-            message.channel('You must specify a member.')
+            message.channel.send('You must specify a member.')
         }
         else
         {
-            if(args = message.mentions.users.first())
+            if(args = message.mentions.members.first())
             {
                 message.mentions.member.kick('Member kicked by ' + message.member.name + '.')
             }
