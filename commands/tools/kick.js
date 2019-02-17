@@ -21,7 +21,7 @@ constructor(client)
         {
             if(args = message.mentions.members.first())
             {
-                message.mentions.member.kick('Member kicked by ' + message.member.name + '.')
+                message.mentions.members.kick('Member kicked by ' + message.member.name + '.')
             }
         }
     }
