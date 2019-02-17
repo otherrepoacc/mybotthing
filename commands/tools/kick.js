@@ -27,7 +27,7 @@ constructor(client)
             {
                 const member = message.mentions.members.first();
                 member.kick('Member kicked by ' + message.member.displayName);
-                reply('Successfully kicked ' + message.mentions.members.first())
+                message.channel.send('Successfully kicked ' + message.mentions.members.first())
             }
             else
             {
