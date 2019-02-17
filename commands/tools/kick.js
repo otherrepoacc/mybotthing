@@ -19,11 +19,15 @@ constructor(client)
         }
         else
         {
-            if(args = message.mentions.members.first())
+            if(args = message.mentions.users.first())
             {
-                message.mentions.members.kick('Member kicked by ' + message.member.name + '.')
+                message.mentions.users.member.kick('Member kicked by ' + message.member.displayName + '.')
             }
-        }
+            else
+            {
+                message.channel.send('You must specify a member.')
+            }
+        }       
     }
 }
     module.exports = KickMemberCommand
