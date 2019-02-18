@@ -1,13 +1,14 @@
 const commando = require('discord.js-commando')
 const YTDL = require('ytdl-core');
+const {queue} = require(__dirname + '/json files/queue.json')
 
 function Play(connection, message)
 {
     var server = servers[message.guild.id]
-    server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
-    server.queue.shift();
+    server.dispatcher = connection.playStream(YTDL(queue[0], {filter: "audioonly"}));
+    queue.shift();
     server.dispatcher.on("end", function(){
-        if(server.queue[0])
+        if(queue[0])
         {
             Play(connection, message);
         }
@@ -43,7 +44,7 @@ constructor(client)
                  .then(connection =>{
                     var server = servers[message.guild.id];
                     message.react('👍')
-                     server.queue.push(args);
+                     queue.push(args);
                      Play(connection, message);
                  })
 
