@@ -8,7 +8,7 @@ class DieRollCommand extends commando.Command
             name: 'roll',
             group: 'fun',
             memberName: 'roll',
-            description: 'Rolls a six sided die by default, add a number after the command to roll a die wh that amount of sides'
+            description: 'Rolls a six sided die by default, add a number after the command to roll a die with that amount of sides'
         });
     }
 
