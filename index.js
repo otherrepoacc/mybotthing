@@ -67,7 +67,7 @@ bot.on('guildDelete', function(){
     bot.user.setActivity('' + bot.guilds.size + ' servers | @Automatic help', {type: 'LISTENING'})
 })
 bot.on('ready', function(){
-    bot.user.setActivity('' + bot.guilds.size + ' servers | @bll_ue Bot help', {type: 'LISTENING'})
+    bot.user.setActivity('' + bot.guilds.size + ' servers | @Automatic help', {type: 'LISTENING'})
 })
 
 

@@ -8,7 +8,7 @@ constructor(client)
             name: 'stop',
             group: 'music',
             memberName: 'stop',
-            description: 'Plays music in voice channel of the commander'
+            description: 'Stops music in voice channel of the commander'
 
         });
     }
@@ -26,7 +26,7 @@ constructor(client)
         }
         else
         {
-            message.channel.send('You must be in a voice channel for me to join it.')
+            message.channel.send('You must be in my voice channel for me to leave it.')
         }
     }
 }
