@@ -3,7 +3,7 @@ const bot = new Commando.Client({
     owner: '452666956353503252',
     commandPrefix: '-'
 });
-const {token} = require('./bot-stuff.json');
+
 bot.registry.registerGroup('fun', 'Fun');
 bot.registry.registerGroup('music', 'Music');
 bot.registry.registerGroup('gifs', 'Gifs');
