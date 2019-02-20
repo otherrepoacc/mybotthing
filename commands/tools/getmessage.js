@@ -1,5 +1,5 @@
 const commando = require('discord.js-commando')
-const fs = require('fs')
+const fs = require('file-system')
 const messagesfile = require(__dirname + '/messages.json')
 class GetMessageCommand extends commando.Command
 {
