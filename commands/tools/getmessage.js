@@ -6,10 +6,10 @@ class GetMessageCommand extends commando.Command
 constructor(client)
     {
         super(client,{
-            name: 'write',
+            name: 'get',
             group: 'tools',
-            memberName: 'write',
-            description: 'Write message to json file'
+            memberName: 'get',
+            description: 'Get message to json file'
         });
     }
     async run(message, args)
