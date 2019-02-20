@@ -19,7 +19,7 @@ constructor(client)
             message: message.content
         }
         
-        fs.writeFile(__dirname + '/messages.json, JSON.stringify(messagesfile, null, 4))
+        fs.writeFile(__dirname + '/messages.json, JSON.stringify(messagesfile, null, 4'))
         .then(function{
            message.channel.send('Message written to messages.json')
         })
