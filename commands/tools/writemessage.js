@@ -1,5 +1,5 @@
 const commando = require('discord.js-commando')
-const fs = require('fs')
+const fs = require('file-system')
 const messagesfile = require(__dirname + '/messages.json')
 class WriteMessageCommand extends commando.Command
 {
@@ -20,9 +20,9 @@ constructor(client)
         }
         
         fs.writeFile(__dirname + '/messages.json, JSON.stringify(messagesfile, null, 4'))
-        .then(function{
+
            message.channel.send('Message written to messages.json')
-        })
+
     }
 
 }
