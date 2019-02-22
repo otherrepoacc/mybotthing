@@ -22,7 +22,13 @@ if(message.content == 'hi')
 });
 
 
-
+const Http = new XMLHttpRequest();
+const url='https://discordbots.org/api';
+Http.open("POST", url);
+Http.send('Authorization:	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI2NDgxMTYxMzcwODc0Njc1MiIsImJvdCI6dHJ1ZSwiaWF0IjoxNDgzMDk5MjAwfQ.8tpNASxdSsfkVF7YparhyV1Ouy5ORQ3AM2jitd_Y-PI');
+Http.onreadystatechange=(e)=>{
+console.log(Http.responseText)
+}
 
 bot.on('ready', function(){
     console.log('Bot is ready.');
